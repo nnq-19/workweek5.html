@@ -1,0 +1,146 @@
+/* TÁI LẬP CÀI ĐẶT CƠ BẢN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* KHUNG GIỚI HẠN ĐỘ RỘNG (Giúp trang không tràn sát lề màn hình) */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* THANH ĐIỀU HƯỚNG */
+.navbar {
+    border-bottom: 2px solid #ccc;
+    padding: 15px 0;
+}
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+.hamburger-menu {
+    display: none; /* Mặc định ẩn trên máy tính */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* PHẦN HERO (MÁY TÍNH: 2 CỘT) */
+.hero-section {
+    margin: 40px 0;
+    padding: 40px 0;
+    border: 1px dashed #999;
+    background-color: #2c3e50; /* Màu nền tối giống như hình mẫu */
+    color: #ffffff;
+}
+.hero-content {
+    flex: 1;
+    margin-right: 40px;
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+/* ĐỊNH DẠNG ẢNH CÁ NHÂN */
+.hero-avatar {
+    width: 350px;
+    height: auto;
+    border: 1px solid #999;
+    object-fit: cover;
+}
+.cta-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PHẦN NỘI DUNG (MÁY TÍNH: 3 CỘT DỰ ÁN) */
+.main-content {
+    padding: 20px 0;
+}
+.main-content .container {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các cột */
+    align-items: stretch; /* Đảm bảo các thẻ cao bằng nhau */
+}
+.card {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+/* ĐỊNH DẠNG KHUNG VÀ ẢNH DỰ ÁN */
+.img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo tỷ lệ */
+}
+.card h3 {
+    margin-bottom: 15px;
+}
+.card button {
+    padding: 8px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* =================================================== */
+/* CẤU HÌNH RESPONSIVE CHO DI ĐỘNG (Dưới 768px)       */
+/* =================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Thanh điều hướng */
+    .nav-links {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* 2. Phần Hero xếp dọc */
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .hero-avatar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* 3. Phần Dự án xếp dọc */
+    .main-content .container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+}
